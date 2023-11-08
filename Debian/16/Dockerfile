@@ -32,7 +32,7 @@ COPY requirements.txt /
 RUN set -xe; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
- 		"postgresql-16-pg_cron"\
+ 		"postgresql-16-cron" \
 		"postgresql-${PG_MAJOR}-pgaudit" \
 		"postgresql-${PG_MAJOR}-pgvector" \
 		"postgresql-${PG_MAJOR}-pg-failover-slots" \
