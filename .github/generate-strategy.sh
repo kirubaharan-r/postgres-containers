@@ -21,7 +21,7 @@ BASE_DIRECTORY="$(pwd)"
 
 # Retrieve the PostgreSQL versions for Debian
 cd ${BASE_DIRECTORY}/Debian
-for version in */; do
+for version in 16/; do
 	[[ $version == src/ ]] && continue
 	debian_versions+=("$version")
 done
