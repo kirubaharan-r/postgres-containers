@@ -24,6 +24,7 @@ LABEL name="PostgreSQL Container Images" \
       summary="PostgreSQL Container images." \
       description="This Docker image contains PostgreSQL and Barman Cloud based on Postgres 16.0-bullseye."
 
+RUN cd /var/lib/postgresql/data/pgdata  && sed -i "s/shared_preload_libraries = ''/shared_preload_libraries = 'pr_cron'/" custom.conf
 LABEL org.opencontainers.image.description="This Docker image contains PostgreSQL and Barman Cloud based on Postgres 16.0-bullseye."
 
 COPY requirements.txt /
